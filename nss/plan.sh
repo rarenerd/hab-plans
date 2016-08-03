@@ -16,7 +16,7 @@ pkg_lib_dirs=(lib)
 
 do_prepare() {
   # Use LDFLAGS during linking
-  sed -e '/\$(MKSHLIB) -o/ s/$/ \$(LDFLAGS)/' -i nss/coreconf/rules.mk
+  sed -e "/\$(MKSHLIB) -o/ s/$/ \$(LDFLAGS)/" -i nss/coreconf/rules.mk
 }
 
 do_build() {
